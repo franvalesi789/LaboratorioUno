@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define T 10
+
+void cargarVector(int[], int);
+void mostrarMaximo(int[], int);
 
 
 int main()
@@ -28,12 +32,7 @@ int main()
         switch(opcion)
         {
         case 1:
-            printf("\tCARGA DE DATOS\n");
-            for(i=0; i<10; i++)
-            {
-                printf("Ingrese un numero: ");
-                scanf("%d", &vectorDeNumeros[i]);
-            }
+            cargarVector(vectorDeNumeros, T);
             break;
         case 2:
             printf("\tMUESTRO EL VECTOR\n");
@@ -65,17 +64,7 @@ int main()
             printf("\n\n\PROMEDIO DE POSITIVOS: %.2f\n\n", promedioPositivos);
             break;
         case 5:
-            flag = 0;
-            for(i = 0; i < 10; i++)
-            {
-                if(flag == 0 || vectorDeNumeros[i] > maximo)
-                {
-                    maximo = vectorDeNumeros[i];
-                }
-                flag = 1;
-
-            }
-            printf("MAXIMO: %d", maximo);
+                mostrarMaximo(vectorDeNumeros, T);
             break;
         case 6:
             flag = 0;
@@ -95,6 +84,8 @@ int main()
             printf("Esa no es una opcion valida.");
 
         }
+        system("pause");
+        system("cls");
     }
     while(opcion != 7);
 
@@ -103,8 +94,30 @@ int main()
 }
 
 
+void cargarVector(int vector[], int tam)
+{
+    int i;
+    printf("\tCARGA DE DATOS\n");
+    for(i=0; i<tam; i++)
+    {
+        printf("Ingrese un numero: ");
+        scanf("%d", &vector[i]);
+    }
+}
 
+void mostrarMaximo(int vector[], int tam)
+{
+    int flag = 0;
+    int i;
+    int maximo;
+    for(i = 0; i < tam; i++)
+    {
+        if(flag == 0 || vector[i] > maximo)
+        {
+            maximo = vector[i];
+        }
+        flag = 1;
 
-
-
-
+    }
+    printf("MAXIMO: %d", maximo);
+}
