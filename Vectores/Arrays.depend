@@ -3,3 +3,13 @@
 	<stdio.h>
 	<stdlib.h>
 
+1567524291 source:d:\valesi\laboratoriouno\vectores\main.c
+	<stdlib.h>
+	"vectores.h"
+
+1567523233 d:\valesi\laboratoriouno\vectores\vectores.h
+	<stdio.h>
+
+1567524305 source:d:\valesi\laboratoriouno\vectores\vectores.c
+	"vectores.h"
+

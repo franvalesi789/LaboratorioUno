@@ -31,11 +31,8 @@ int main()
             cargarVector(vectorDeNumeros, T);
             break;
         case 2:
-            printf("\tMUESTRO EL VECTOR\n");
-            for(i=0; i<T; i++)
-            {
-                printf("%d\n", vectorDeNumeros[i]);
-            }
+            printf("\tMUESTRO EL VECTOR ORDENADO DE MENOR A MAYOR\n");
+           ordenarVector(vectorDeNumeros, T);
             break;
         case 3:
             printf("\n\n\tMUESTRO SOLO LOS NEGATIVOS\n");
@@ -77,7 +74,7 @@ int main()
 
             break;
         default:
-            printf("Esa no es una opcion valida.");
+            printf("Hasta luego!");
 
         }
         system("pause");

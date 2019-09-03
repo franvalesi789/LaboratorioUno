@@ -18,7 +18,7 @@ void mostrarMaximo(int vector[], int tam)
     maximo = calcularMaximo(vector, tam);
 
 
-             for(i = 0; i < tam; i++)
+    for(i = 0; i < tam; i++)
     {
         if(vector[i] == maximo)
         {
@@ -43,4 +43,28 @@ int calcularMaximo(int vector[], int tam)
     }
     return maximo;
 
+}
+
+void ordenarVector(int vector[], int tam)
+{
+    int i;
+    int j;
+    int aux;
+
+    for(i = 0; i < tam-1; i++)
+    {
+        for(j = i+1; j < tam; j++)
+        {
+            if(vector[i] > vector[j])
+            {
+                aux = vector[i];
+                vector[i] = vector[j];
+                vector[j] = aux;
+            }
+        }
+    }
+    for(i=0; i<tam; i++)
+            {
+                printf("%d\n", vector[i]);
+            }
 }
